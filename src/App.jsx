@@ -1,9 +1,13 @@
 import React from "react";
 
-import "./reset.css";
+import { VanillaForm } from "./pages";
 
 const App = () => {
-  return <p>Hello</p>;
+  return (
+    <>
+      <VanillaForm />
+    </>
+  );
 };
 
 export default App;
