@@ -10,19 +10,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📦 Checkout code
+      - name: Checkout code 📦
        uses: actions/checkout@v1
 
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: 🏗 Install and Build
+      - name: Install and Build 🏗
         run: |
           npm install
           npm run build --if-present
 
-      - name: 🚀 Deploy to netlify
+      - name: Deploy to netlify 🚀
         uses: netlify/actions/cli@master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
