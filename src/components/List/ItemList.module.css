@@ -1,0 +1,23 @@
+.item {
+  padding: 2rem;
+  background: white;
+  border-bottom: 1px solid #e1e1e1;
+  color: black;
+  list-style: none;
+}
+
+.item p {
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+.item p span {
+  font-weight: normal;
+}
+.item:first-of-type {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.item:last-of-type {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
