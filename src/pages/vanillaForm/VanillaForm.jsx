@@ -1,10 +1,17 @@
 import React from "react";
+import { useState } from "react";
 
 import "./Vanilla.css";
 
-import { Form } from "../../components";
+import { Form, List } from "../../components";
 
 const VanillaForm = () => {
+  const [dataSave, setDataSave] = useState([]);
+
+  const getData = (data) => {
+    setDataSave([...dataSave, data]);
+  };
+
   return (
     <>
       <h1>Formulario Vanilla React</h1>
@@ -12,10 +19,11 @@ const VanillaForm = () => {
         <div className="row">
           <div className="one-half column">
             <h2>Agregar</h2>
-            <Form />
+            <Form getData={getData} />
           </div>
+
           <div className="one-half column">
-            <h2>Listar</h2>
+            <List data={dataSave} />
           </div>
         </div>
       </div>
